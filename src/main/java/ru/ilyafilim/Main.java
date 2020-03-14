@@ -5,7 +5,6 @@ import ru.ilyafilim.constants.Statics;
 import ru.ilyafilim.domain.Question;
 import ru.ilyafilim.service.QuestionService;
 
-import javax.sound.midi.Soundbank;
 import java.util.Scanner;
 
 public class Main {
