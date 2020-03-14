@@ -2,6 +2,7 @@ package ru.ilyafilim.domain;
 
 public class Question {
 
+
     private final String term;
     private final String definition;
 

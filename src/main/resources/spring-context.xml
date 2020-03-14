@@ -5,7 +5,6 @@
         http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <bean id="questionDao" class="ru.ilyafilim.dao.QuestionDaoCSV"/>
-
     <bean id="questionService" class="ru.ilyafilim.service.QuestionServiceImpl">
         <constructor-arg name="dao" ref="questionDao"/>
     </bean>
