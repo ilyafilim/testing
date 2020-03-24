@@ -1,7 +1,8 @@
 package ru.ilyafilim.service;
 
 public interface DialogService {
-    String getHello();
+
+    String printHello();
     String enterName();
     String enterSurname();
     String letsTest();
