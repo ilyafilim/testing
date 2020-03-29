@@ -1,5 +1,8 @@
 package ru.ilyafilim;
 
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import ru.ilyafilim.constants.Statics;
 import ru.ilyafilim.domain.Question;
@@ -7,11 +10,14 @@ import ru.ilyafilim.service.QuestionService;
 
 import java.util.Scanner;
 
+@Configuration
+@ComponentScan
 public class Main {
 
     public static void main(String[] args) {
-        ClassPathXmlApplicationContext context =
-                new ClassPathXmlApplicationContext("/spring-context.xml");
+        AnnotationConfigApplicationContext context =
+                new AnnotationConfigApplicationContext(Main.class);
+
         QuestionService questionService = context.getBean(QuestionService.class);
 
         Scanner in = new Scanner(System.in);
