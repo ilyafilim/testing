@@ -18,8 +18,8 @@ public class DialogServiceImpl implements DialogService {
     }
 
     @Override
-    public String enterSurname(String surname) {
-        return messagesSource.getMessage("enter.surname", new String[]{surname}, Locale.ENGLISH);
+    public String enterSurname(String name) {
+        return messagesSource.getMessage("enter.surname", new String[]{name}, Locale.ENGLISH);
     }
 
     @Override

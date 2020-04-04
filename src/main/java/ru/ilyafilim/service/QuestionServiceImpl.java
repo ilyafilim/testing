@@ -1,6 +1,5 @@
 package ru.ilyafilim.service;
 
-import ru.ilyafilim.constants.Statics;
 import ru.ilyafilim.dao.QuestionDao;
 import ru.ilyafilim.domain.Question;
 
@@ -13,6 +12,6 @@ public class QuestionServiceImpl implements QuestionService {
 
     @Override
     public Question getNextQuestion() {
-        return dao.readRow(Statics.getQuestion());
+        return dao.readRow();
     }
 }

@@ -9,15 +9,17 @@ import java.io.InputStreamReader;
 
 public class QuestionDaoCSV implements QuestionDao {
 
+    private int currentRow = 0;
 
     @Override
-    public Question readRow(int rowNumber) {
+    public Question readRow() {
         try {
+            currentRow++;
             InputStream in = getClass().getResourceAsStream("/test.csv");
             BufferedReader br = new BufferedReader(new InputStreamReader(in));
             String line; int c = 0;
             while ((line = br.readLine()) != null) {
-                if (c == rowNumber) {
+                if (c == currentRow) {
                     return new Question(line.split(",", 2)[0], line.split(",", 2)[1]);
                 }
                 c++;
