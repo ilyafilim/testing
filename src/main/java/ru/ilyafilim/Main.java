@@ -6,6 +6,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import ru.ilyafilim.constants.Statics;
 import ru.ilyafilim.domain.Question;
+import ru.ilyafilim.service.DialogService;
 import ru.ilyafilim.service.QuestionService;
 
 import java.util.Scanner;
@@ -19,8 +20,9 @@ public class Main {
                 new AnnotationConfigApplicationContext(Main.class);
 
         QuestionService questionService = context.getBean(QuestionService.class);
+        DialogService dialogService = context.getBean(DialogService.class);
 
-        Scanner in = new Scanner(System.in);
+        /*Scanner in = new Scanner(System.in);
         System.out.print("Добро пожаловать, пожалуйста введите своё Имя: ");
         String name = in.nextLine();
         System.out.print("\nСпасибо, " + name + ". Теперь необходимо ввести Фамилию: ");
@@ -41,7 +43,7 @@ public class Main {
         }
 
         System.out.println();
-        System.out.println("Тест окончен. Спасибо за прохождение, " + name + " " + surname + ". Вы набрали " + c + " " + (c > 4 ? "баллов" : c > 1 ? "балла" : c == 1 ? "балл" : "баллов") + ".");
+        System.out.println("Тест окончен. Спасибо за прохождение, " + name + " " + surname + ". Вы набрали " + c + " " + (c > 4 ? "баллов" : c > 1 ? "балла" : c == 1 ? "балл" : "баллов") + ".");*/
         context.close();
     }
 }

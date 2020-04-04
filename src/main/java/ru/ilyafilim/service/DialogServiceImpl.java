@@ -18,37 +18,37 @@ public class DialogServiceImpl implements DialogService {
     }
 
     @Override
-    public String enterName() {
-        return null;
-    }
-
-    @Override
-    public String enterSurname() {
-        return null;
+    public String enterSurname(String surname) {
+        return messagesSource.getMessage("enter.surname", new String[]{surname}, Locale.ENGLISH);
     }
 
     @Override
     public String letsTest() {
-        return null;
+        return messagesSource.getMessage("lets.test", null, Locale.ENGLISH);
+    }
+
+    @Override
+    public String getQuestion() {
+        return messagesSource.getMessage("get.question", null, Locale.ENGLISH);
     }
 
     @Override
     public String getRight() {
-        return null;
+        return messagesSource.getMessage("get.right", null, Locale.ENGLISH);
     }
 
     @Override
-    public String getWrong() {
-        return null;
+    public String getWrong(String rightAnswer) {
+        return messagesSource.getMessage("get.wrong", new String[]{rightAnswer}, Locale.ENGLISH);
     }
 
     @Override
     public String nextQuestion() {
-        return null;
+        return messagesSource.getMessage("next.question", null, Locale.ENGLISH);
     }
 
     @Override
     public String finalQuestion() {
-        return null;
+        return messagesSource.getMessage("final.question", null, Locale.ENGLISH);
     }
 }
