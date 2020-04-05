@@ -6,14 +6,15 @@ import java.util.Scanner;
 
 public class GameServiceImp implements GameService {
 
-    final int MAX_QUESTION = 4;
+    final int MAX_QUESTION;
 
     private final DialogService dialogService;
     private final QuestionService questionService;
 
-    public GameServiceImp(DialogService dialogService, QuestionService questionService) {
+    public GameServiceImp(DialogService dialogService, QuestionService questionService, Integer maxQuestions) {
         this.dialogService = dialogService;
         this.questionService = questionService;
+        this.MAX_QUESTION = maxQuestions;
     }
 
     @Override

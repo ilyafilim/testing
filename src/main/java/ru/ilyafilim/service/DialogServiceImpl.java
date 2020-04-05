@@ -9,8 +9,11 @@ import java.util.Locale;
 @Component
 public class DialogServiceImpl implements DialogService {
 
-    @Autowired
-    private MessageSource messagesSource;
+    private final MessageSource messagesSource;
+
+    public DialogServiceImpl(MessageSource messagesSource) {
+        this.messagesSource = messagesSource;
+    }
 
     @Override
     public String printHello() {
