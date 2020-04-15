@@ -4,5 +4,5 @@ import ru.ilyafilim.domain.Question;
 
 public interface QuestionDao {
 
-    Question readRow(int rowNumber);
+    Question readRow();
 }
