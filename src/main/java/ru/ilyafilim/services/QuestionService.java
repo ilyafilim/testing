@@ -1,4 +1,4 @@
-package ru.ilyafilim.service;
+package ru.ilyafilim.services;
 
 import ru.ilyafilim.domain.Question;
 

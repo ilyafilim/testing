@@ -3,9 +3,7 @@ package ru.ilyafilim;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-import ru.ilyafilim.service.DialogService;
-import ru.ilyafilim.service.GameService;
-import ru.ilyafilim.service.QuestionService;
+import ru.ilyafilim.services.GameService;
 
 @Configuration
 @ComponentScan

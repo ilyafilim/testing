@@ -1,8 +1,10 @@
-package ru.ilyafilim.service;
+package ru.ilyafilim.services;
 
+import org.springframework.stereotype.Service;
 import ru.ilyafilim.dao.QuestionDao;
 import ru.ilyafilim.domain.Question;
 
+@Service
 public class QuestionServiceImpl implements QuestionService {
 
     private final QuestionDao dao;

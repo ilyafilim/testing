@@ -1,5 +1,7 @@
 package ru.ilyafilim.dao;
 
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.PropertySource;
 import ru.ilyafilim.domain.Question;
 
 import java.io.BufferedReader;
@@ -7,14 +9,12 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 
+@PropertySource("classpath:app.properties")
 public class QuestionDaoCSV implements QuestionDao {
 
-    private final String csvFile;
+    @Value("${csv.ru.testing.file}")
+    private String csvFile;
     private int currentRow = 0;
-
-    public QuestionDaoCSV(String csvFile) {
-        this.csvFile = csvFile;
-    }
 
     @Override
     public Question readRow() {
