@@ -5,7 +5,6 @@ import ru.ilyafilim.constants.Statics;
 import ru.ilyafilim.domain.Question;
 import ru.ilyafilim.service.QuestionService;
 
-import javax.sound.midi.Soundbank;
 import java.util.Scanner;
 
 public class Main {
@@ -31,7 +30,7 @@ public class Main {
                 c++;
                 System.out.println("Верно! Дан правильный ответ, Вы заработали одно очко. " + (Statics.MAX_QUESTION - a == 1 ? "Финальный вопрос:" : "Следующий вопрос:"));
             } else {
-                System.out.println("К сожалению, это неверный ответ, правильный - " + question.getTerm() + ". И так, " + (Statics.MAX_QUESTION - a == 1 ? "Финальный вопрос:" : "Следующий вопрос:"));
+                System.out.println("К сожалению, это неверный ответ, правильный – " + question.getTerm() + ". И так, " + (Statics.MAX_QUESTION - a == 1 ? "Финальный вопрос:" : "Следующий вопрос:"));
             }
         }
 
