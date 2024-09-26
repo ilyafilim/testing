@@ -1,9 +1,10 @@
-package ru.ilyafilim.service;
+package ru.ilyafilim.services;
 
-import ru.ilyafilim.constants.Statics;
+import org.springframework.stereotype.Service;
 import ru.ilyafilim.dao.QuestionDao;
 import ru.ilyafilim.domain.Question;
 
+@Service
 public class QuestionServiceImpl implements QuestionService {
 
     private final QuestionDao dao;
@@ -13,6 +14,6 @@ public class QuestionServiceImpl implements QuestionService {
 
     @Override
     public Question getNextQuestion() {
-        return dao.readRow(Statics.getQuestion());
+        return dao.readRow();
     }
 }
